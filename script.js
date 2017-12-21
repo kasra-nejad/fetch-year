@@ -7,7 +7,7 @@ window.onload = function() {
   function fetchYear() {
     let year = input.value;
     let url = `http://numbersapi.com/${year}/year`;
-
+if (year != '') {
     fetch(url)
       .then(res => res.text())
       .then(data => {
@@ -15,6 +15,7 @@ window.onload = function() {
         factText.innerText = data;
       })
       .catch(err => console.log(err));
+    }  
   }
 
 }
