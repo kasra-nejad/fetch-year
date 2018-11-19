@@ -6,7 +6,7 @@ window.onload = function() {
 
   function fetchYear() {
     let year = input.value;
-    let url = `http://numbersapi.com/${year}/year`;
+    let url = `https://cors-anywhere.herokuapp.com/http://numbersapi.com/${year}/year`;
     if (year != "") {
       fetch(url)
         .then(res => res.text())
